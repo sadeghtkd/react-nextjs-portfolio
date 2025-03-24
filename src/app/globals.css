@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 31, 41, 55;
 }
 
 @theme inline {
@@ -16,6 +19,26 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto;
+  }
+  
+  .heading-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600;
   }
 }
 
